@@ -1,0 +1,19 @@
+targets:
+  main:
+    resources:
+      RawSerialPort:
+        port: '/dev/ttyUSB1'
+      NetworkService:
+        address: '192.168.1.100'
+        username: 'root'
+        password: 'root'
+    drivers:
+      SSHDriver: {}
+
+      SerialDriver: {}
+      ShellDriver:
+        prompt: 'root@[a-zA-Z0-9\-]+:[^ ]+ '
+        login_prompt: 'my-ultra96-zynqmp login: '
+        login_timeout: 5
+        username: 'root'
+        password: 'root'
