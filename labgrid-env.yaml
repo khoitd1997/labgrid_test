@@ -10,6 +10,13 @@ targets:
     drivers:
       SSHDriver: {}
 
+      ExternalPowerDriver:
+        cmd_on: "logger 'ExternalPowerDriver: on'"
+        cmd_off: "logger 'ExternalPowerDriver: off'"
+        cmd_cycle: "logger 'ExternalPowerDriver: cycle'"
+      ManualPowerDriver:
+        name: 'ultra96'
+
       SerialDriver: {}
       ShellDriver:
         prompt: 'root@[a-zA-Z0-9\-]+:[^ ]+ '
